@@ -1,12 +1,16 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ant</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -16,7 +20,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-a { color: inherit; text-decoration: none; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -24,6 +33,7 @@ header {
   color: #888;
   font-size: 13px;
 }
+
 main {
   flex: 1;
   display: flex;
@@ -31,12 +41,14 @@ main {
   justify-content: center;
   padding: 35px 20px;
 }
+
 .profile {
   width: 100%;
   max-width: 320px;
   text-align: center;
   animation: fade .8s ease;
 }
+
 .avatar {
   width: 105px;
   height: 105px;
@@ -45,20 +57,24 @@ main {
   border: 1px solid #393939;
   margin-bottom: 20px;
 }
+
 h1 {
   font-size: 22px;
   font-weight: 500;
   margin: 0;
 }
+
 .bio {
   color: #777;
   font-size: 13px;
   margin: 12px 0 28px;
 }
+
 .links {
   display: grid;
   gap: 10px;
 }
+
 .link {
   display: flex;
   align-items: center;
@@ -71,19 +87,32 @@ h1 {
   font-size: 13px;
   transition: .2s;
 }
+
 .link:hover {
   background: #171717;
   border-color: #777;
   transform: translateY(-2px);
 }
-.icon { width: 20px; text-align: center; }
-.label { flex: 1; }
-.arrow { color: #888; }
+
+.icon {
+  width: 20px;
+  text-align: center;
+}
+
+.label {
+  flex: 1;
+}
+
+.arrow {
+  color: #888;
+}
+
 .roblox {
   display: grid;
   grid-template-columns: 20px 1fr auto;
   align-items: center;
 }
+
 .accounts {
   display: flex;
   flex-direction: column;
@@ -92,22 +121,38 @@ h1 {
   font-size: 11px;
   margin-top: 6px;
 }
-.accounts a:hover { color: white; }
+
+.accounts a:hover {
+  color: white;
+}
+
 footer {
   text-align: center;
   padding: 25px;
   color: #666;
   font-size: 12px;
 }
+
 @keyframes fade {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 @media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -117,14 +162,22 @@ footer {
 
 <main>
   <section class="profile">
-    <img class="avatar" src="avatar.png" alt="ant's avatar">
+
+    <img
+      class="avatar"
+      src="https://cdn.discordapp.com/avatars/372966022954876929/5e015e9cc5e6ecd19eccdd60737dd1ff.png?size=4096"
+      alt="ant's avatar"
+    >
+
     <h1>ant</h1>
     <p class="bio">just here.</p>
 
     <nav class="links">
+
       <a class="link"
          href="https://discord.com/users/372966022954876929"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         <span class="icon">◉</span>
         <span class="label">Discord</span>
         <span class="arrow">↗</span>
@@ -132,7 +185,8 @@ footer {
 
       <a class="link"
          href="https://github.com/e5p6"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         <span class="icon">⌘</span>
         <span class="label">GitHub · e5p6</span>
         <span class="arrow">↗</span>
@@ -140,21 +194,28 @@ footer {
 
       <div class="link roblox">
         <span class="icon">◇</span>
+
         <div>
           <span>Roblox</span>
+
           <div class="accounts">
             <a href="https://www.roblox.com/search/users?keyword=scopeest"
-               target="_blank" rel="noopener noreferrer">
+               target="_blank"
+               rel="noopener noreferrer">
               scopeest ↗
             </a>
+
             <a href="https://www.roblox.com/search/users?keyword=enformlnn"
-               target="_blank" rel="noopener noreferrer">
+               target="_blank"
+               rel="noopener noreferrer">
               enformlnn ↗
             </a>
           </div>
         </div>
+
         <span class="arrow">↗</span>
       </div>
+
     </nav>
   </section>
 </main>
@@ -165,3 +226,4 @@ footer {
 
 </body>
 </html>
+```
