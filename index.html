@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,89 +24,75 @@
       align-items: center;
       justify-content: center;
       padding: 24px;
-      background:
-        radial-gradient(ellipse at top, #20202b 0%, #101015 45%, #08080b 100%);
+      background: #0b0b0f;
       color: #f5f5f7;
       font-family: 'Inter', sans-serif;
     }
 
     .card {
       width: 100%;
-      max-width: 390px;
-      padding: 32px 25px;
+      max-width: 370px;
+      padding: 30px 24px;
       text-align: center;
-      background: rgba(20, 20, 27, 0.92);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 24px;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
-      animation: appear 0.6s ease both;
-    }
-
-    @keyframes appear {
-      from {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      background: #121218;
+      border: 1px solid #25252e;
+      border-radius: 22px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     }
 
     .avatar {
-      width: 104px;
-      height: 104px;
+      width: 100px;
+      height: 100px;
       display: block;
       margin: 0 auto 18px;
       object-fit: cover;
       border-radius: 50%;
-      border: 2px solid rgba(255, 255, 255, 0.18);
-      background: #24242d;
-      box-shadow: 0 0 30px rgba(120, 100, 255, 0.15);
+      border: 2px solid #30303b;
+      background: #20202a;
     }
 
     h1 {
-      font-size: 29px;
+      font-size: 28px;
       font-weight: 800;
       letter-spacing: -1px;
     }
 
     .subtitle {
-      margin-top: 8px;
+      margin-top: 7px;
       margin-bottom: 25px;
-      color: #9999a8;
+      color: #858591;
       font-size: 13px;
     }
 
     .links {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 11px;
     }
 
     .link {
       display: flex;
       align-items: center;
       gap: 13px;
-      min-height: 55px;
-      padding: 0 17px;
+      min-height: 54px;
+      padding: 0 16px;
       color: #f5f5f7;
       text-decoration: none;
       background: #191920;
       border: 1px solid #292933;
-      border-radius: 14px;
-      transition: transform 0.2s ease, background 0.2s ease,
-                  border-color 0.2s ease;
+      border-radius: 13px;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
     }
 
     .link:hover {
-      transform: translateY(-3px);
-      background: #24242e;
-      border-color: #454553;
+      background: #22222b;
+      border-color: #41414f;
+      transform: translateY(-2px);
     }
 
-    .link i {
+    .link-icon {
       width: 23px;
+      flex-shrink: 0;
       font-size: 20px;
       text-align: center;
     }
@@ -119,7 +106,10 @@
     }
 
     .roblox-icon {
-      color: #ffffff;
+      width: 21px;
+      height: 21px;
+      flex-shrink: 0;
+      display: block;
     }
 
     .link-name {
@@ -135,15 +125,9 @@
     }
 
     .footer {
-      margin-top: 25px;
-      color: #656572;
+      margin-top: 24px;
+      color: #666672;
       font-size: 11px;
-    }
-
-    @media (max-width: 420px) {
-      .card {
-        padding: 27px 19px;
-      }
     }
   </style>
 </head>
@@ -152,54 +136,45 @@
   <main class="card">
     <img
       class="avatar"
-      src="https://cdn.discordapp.com/avatars/372966022954876929/5e015e9cc5e6ecd19eccdd60737dd1ff.png?size=4096"
-      alt="ant's avatar"
+      src="https://cdn.discordapp.com/avatars/372966022954876929/5e015e9cc5e6ecd19eccdd60737dd1ff.png?size=256"
+      alt="ant"
+      onerror="this.onerror=null;this.src='avatar.png';"
     >
 
     <h1>ant</h1>
     <p class="subtitle">my links ♡</p>
 
     <nav class="links" aria-label="Social links">
-      <a
-        class="link"
-        href="https://discord.com/users/372966022954876929"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-brands fa-discord discord-icon"></i>
+      <a class="link" href="https://discord.com/users/372966022954876929" target="_blank" rel="noopener noreferrer">
+        <i class="link-icon fa-brands fa-discord discord-icon"></i>
         <span class="link-name">Discord</span>
         <i class="fa-solid fa-arrow-up-right-from-square external"></i>
       </a>
 
-      <a
-        class="link"
-        href="https://github.com/e5p6"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-brands fa-github github-icon"></i>
+      <a class="link" href="https://github.com/e5p6" target="_blank" rel="noopener noreferrer">
+        <i class="link-icon fa-brands fa-github github-icon"></i>
         <span class="link-name">GitHub</span>
         <i class="fa-solid fa-arrow-up-right-from-square external"></i>
       </a>
 
-      <a
-        class="link"
-        href="https://www.roblox.com/search/users?keyword=scopeest"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-solid fa-cube roblox-icon"></i>
+      <a class="link" href="https://www.roblox.com/search/users?keyword=scopeest" target="_blank" rel="noopener noreferrer">
+        <svg class="roblox-icon" viewBox="0 0 100 100" aria-label="Roblox" role="img">
+          <g transform="rotate(15 50 50)">
+            <rect x="17" y="17" width="66" height="66" fill="white"/>
+            <rect x="37" y="37" width="26" height="26" fill="#191920"/>
+          </g>
+        </svg>
         <span class="link-name">Roblox — scopeest</span>
         <i class="fa-solid fa-arrow-up-right-from-square external"></i>
       </a>
 
-      <a
-        class="link"
-        href="https://www.roblox.com/search/users?keyword=enformlnn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-solid fa-cube roblox-icon"></i>
+      <a class="link" href="https://www.roblox.com/search/users?keyword=enformlnn" target="_blank" rel="noopener noreferrer">
+        <svg class="roblox-icon" viewBox="0 0 100 100" aria-label="Roblox" role="img">
+          <g transform="rotate(15 50 50)">
+            <rect x="17" y="17" width="66" height="66" fill="white"/>
+            <rect x="37" y="37" width="26" height="26" fill="#191920"/>
+          </g>
+        </svg>
         <span class="link-name">Roblox — enformlnn</span>
         <i class="fa-solid fa-arrow-up-right-from-square external"></i>
       </a>
