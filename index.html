@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,8 @@
       align-items: center;
       justify-content: center;
       padding: 24px;
-      background: radial-gradient(ellipse at top, #20202b 0%, #101015 45%, #08080b 100%);
+      background:
+        radial-gradient(ellipse at top, #20202b 0%, #101015 45%, #08080b 100%);
       color: #f5f5f7;
       font-family: 'Inter', sans-serif;
     }
@@ -37,6 +39,18 @@
       border: 1px solid rgba(255, 255, 255, 0.09);
       border-radius: 24px;
       box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      animation: appear 0.6s ease both;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .avatar {
@@ -49,6 +63,12 @@
       border: 2px solid rgba(255, 255, 255, 0.18);
       background: #24242d;
       box-shadow: 0 0 30px rgba(120, 100, 255, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 35px rgba(120, 100, 255, 0.3);
     }
 
     h1 {
@@ -81,14 +101,18 @@
       background: #191920;
       border: 1px solid #292933;
       border-radius: 14px;
-      transition: transform 0.2s ease, background 0.2s ease,
-                  border-color 0.2s ease;
+      transition:
+        transform 0.22s ease,
+        background 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
     }
 
     .link:hover {
       transform: translateY(-3px);
       background: #24242e;
       border-color: #454553;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     }
 
     .link-icon {
@@ -96,6 +120,12 @@
       flex-shrink: 0;
       font-size: 20px;
       text-align: center;
+      transition: transform 0.22s ease;
+    }
+
+    .link:hover .link-icon,
+    .link:hover .roblox-icon {
+      transform: scale(1.12);
     }
 
     .discord-icon {
@@ -110,6 +140,7 @@
       width: 22px;
       height: 22px;
       flex-shrink: 0;
+      transition: transform 0.22s ease;
     }
 
     .link-name {
@@ -122,6 +153,12 @@
     .external {
       color: #777784;
       font-size: 12px !important;
+      transition: color 0.22s ease, transform 0.22s ease;
+    }
+
+    .link:hover .external {
+      color: #c5c5d2;
+      transform: translate(2px, -2px);
     }
 
     .footer {
@@ -135,13 +172,18 @@
         padding: 27px 19px;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main class="card">
-
-    <!-- Profile picture -->
     <img
       class="avatar"
       src="https://cdn.discordapp.com/avatars/372966022954876929/5e015e9cc5e6ecd19eccdd60737dd1ff.png?size=256"
@@ -153,48 +195,28 @@
     <p class="subtitle">my links ♡</p>
 
     <nav class="links" aria-label="Social links">
-
-      <!-- Discord -->
-      <a
-        class="link"
-        href="https://discord.com/users/372966022954876929"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="link" href="https://discord.com/users/372966022954876929" target="_blank" rel="noopener noreferrer">
         <i class="link-icon fa-brands fa-discord discord-icon"></i>
         <span class="link-name">Discord</span>
         <i class="fa-solid fa-arrow-up-right-from-square external"></i>
       </a>
 
-      <!-- GitHub -->
-      <a
-        class="link"
-        href="https://github.com/e5p6"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="link" href="https://github.com/e5p6" target="_blank" rel="noopener noreferrer">
         <i class="link-icon fa-brands fa-github github-icon"></i>
         <span class="link-name">GitHub</span>
         <i class="fa-solid fa-arrow-up-right-from-square external"></i>
       </a>
 
-      <!-- Roblox: one button only -->
-      <a
-        class="link"
-        href="https://www.roblox.com/search/users?keyword=scopeest"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="link" href="https://www.roblox.com/search/users?keyword=scopeest" target="_blank" rel="noopener noreferrer">
         <svg class="roblox-icon" viewBox="0 0 100 100" role="img" aria-label="Roblox">
           <g transform="rotate(15 50 50)">
             <rect x="17" y="17" width="66" height="66" fill="white"/>
             <rect x="37" y="37" width="26" height="26" fill="#191920"/>
           </g>
         </svg>
-        <span class="link-name">Roblox</span>
+        <span class="link-name">Roblox — scopeest</span>
         <i class="fa-solid fa-arrow-up-right-from-square external"></i>
       </a>
-
     </nav>
 
     <p class="footer">made by ant</p>
