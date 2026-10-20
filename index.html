@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ant</title>
 
+<!-- Font Awesome icons -->
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <style>
 * {
   box-sizing: border-box;
@@ -34,6 +38,11 @@ header {
   font-size: 13px;
 }
 
+header a:hover,
+footer a:hover {
+  color: white;
+}
+
 main {
   flex: 1;
   display: flex;
@@ -44,7 +53,7 @@ main {
 
 .profile {
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
   text-align: center;
   animation: fade .8s ease;
 }
@@ -56,12 +65,14 @@ main {
   border-radius: 50%;
   border: 1px solid #393939;
   margin-bottom: 20px;
+  background: #111;
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 500;
   margin: 0;
+  letter-spacing: .5px;
 }
 
 .bio {
@@ -72,31 +83,45 @@ h1 {
 
 .links {
   display: grid;
-  gap: 10px;
+  gap: 11px;
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 13px;
-  padding: 15px 18px;
-  border: 1px solid #353535;
-  border-radius: 30px;
-  background: #0b0b0b;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid #303030;
+  border-radius: 15px;
+  background: #0d0d0d;
   text-align: left;
   font-size: 13px;
-  transition: .2s;
+  transition: .2s ease;
 }
 
-.link:hover {
+a.link:hover {
   background: #171717;
-  border-color: #777;
-  transform: translateY(-2px);
+  border-color: #666;
+  transform: translateY(-3px);
 }
 
 .icon {
-  width: 20px;
+  width: 23px;
   text-align: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.discord-icon {
+  color: #5865F2;
+}
+
+.github-icon {
+  color: #eee;
+}
+
+.roblox-icon {
+  color: #fff;
 }
 
 .label {
@@ -104,22 +129,34 @@ h1 {
 }
 
 .arrow {
-  color: #888;
+  color: #777;
+  font-size: 12px;
 }
 
 .roblox {
-  display: grid;
-  grid-template-columns: 20px 1fr auto;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
+}
+
+.roblox-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .accounts {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 9px;
   color: #888;
   font-size: 11px;
-  margin-top: 6px;
+  margin-top: 10px;
+}
+
+.accounts a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color .2s;
 }
 
 .accounts a:hover {
@@ -156,7 +193,10 @@ footer {
 <body>
 
 <header>
-  <a href="https://github.com/e5p6">github.com/e5p6</a>
+  <a href="https://github.com/e5p6"
+     target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-github"></i> github.com/e5p6
+  </a>
   <span>☾</span>
 </header>
 
@@ -165,7 +205,7 @@ footer {
 
     <img
       class="avatar"
-      src="https://cdn.discordapp.com/avatars/372966022954876929/5e015e9cc5e6ecd19eccdd60737dd1ff.png?size=4096"
+      src="avatar.png"
       alt="ant's avatar"
     >
 
@@ -174,46 +214,52 @@ footer {
 
     <nav class="links">
 
+      <!-- Discord -->
       <a class="link"
          href="https://discord.com/users/372966022954876929"
          target="_blank"
          rel="noopener noreferrer">
-        <span class="icon">◉</span>
+
+        <i class="fa-brands fa-discord icon discord-icon"></i>
         <span class="label">Discord</span>
-        <span class="arrow">↗</span>
+        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
       </a>
 
+      <!-- GitHub -->
       <a class="link"
          href="https://github.com/e5p6"
          target="_blank"
          rel="noopener noreferrer">
-        <span class="icon">⌘</span>
+
+        <i class="fa-brands fa-github icon github-icon"></i>
         <span class="label">GitHub · e5p6</span>
-        <span class="arrow">↗</span>
+        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
       </a>
 
+      <!-- Roblox -->
       <div class="link roblox">
-        <span class="icon">◇</span>
 
-        <div>
-          <span>Roblox</span>
+        <i class="fa-solid fa-cube icon roblox-icon"></i>
+
+        <div class="roblox-content">
+          <span class="label">Roblox</span>
 
           <div class="accounts">
             <a href="https://www.roblox.com/search/users?keyword=scopeest"
                target="_blank"
                rel="noopener noreferrer">
-              scopeest ↗
+              <span>scopeest</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
 
             <a href="https://www.roblox.com/search/users?keyword=enformlnn"
                target="_blank"
                rel="noopener noreferrer">
-              enformlnn ↗
+              <span>enformlnn</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </div>
-
-        <span class="arrow">↗</span>
       </div>
 
     </nav>
@@ -221,7 +267,10 @@ footer {
 </main>
 
 <footer>
-  <a href="https://github.com/e5p6">github.com/e5p6</a>
+  <a href="https://github.com/e5p6"
+     target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-github"></i> github.com/e5p6
+  </a>
 </footer>
 
 </body>
